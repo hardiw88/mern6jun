@@ -1,0 +1,78 @@
+$primary-color: black;
+$secondary-color: rgb(5, 0, 0);
+$third-color: rgb(5, 54, 109);
+$fifth-color: rgb(1, 151, 156);
+$sixth-color: rgb(201, 102, 10);
+$backgroundcolor: rgb(242, 249, 250);
+$primary-font: Montserrat;
+$secondary-font: Montserrat Light;
+$third-font: Inter;
+$fourth-font: Inter Light;
+
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+
+  background-color: $backgroundcolor;
+}
+
+h1 {
+  font-family: $primary-font;
+  color: $fifth-color;
+  font-size: 2rem;
+}
+
+p {
+  font-family: $third-font;
+  color: $primary-color;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.header-wrapper {
+  display: flex;
+  gap: 200px;
+  justify-content: space-around;
+  //   width: 100%;
+  border: 1px solid rgb(151, 9, 9);
+
+  h1 {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(151, 9, 9);
+  }
+  ul {
+    flex: 3;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: $third-font;
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    border: 1px solid rgb(151, 9, 9);
+  }
+  li {
+    border: 1px solid rgb(151, 9, 9);
+  }
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(./assets/font/Montserrat.ttf);
+}
+
+@font-face {
+  font-family: Montserrat Light;
+  src: url(./assets/font/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(./assets/font/Inter.ttf);
+}
+
+@font-face {
+  font-family: Inter Light;
+  src: url(./assets/font/Inter-Light.ttf);
+}
