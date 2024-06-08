@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: black;
+  background: linear-gradient(to right, black, black, black);
+  background-color: var(--background-color) !important;
+  --background-color: rgba(153, 194, 165, 0.76);
+  --warning-color: #9c0f0f;
+  --title-color: rgb(39, 33, 33);
+}
+
+body {
+  font-family: Montserrat;
+}
+
+#dashboard {
+  display: none;
+}
+
+.login-container {
+  background-color: rgba(255, 253, 253, 0.397);
+  box-shadow: 0 0 2px 2px rgba(143, 135, 135, 0.39);
+  box-sizing: border-box;
+  border: 0px solid rgb(224, 215, 215);
+  margin: auto;
+  width: 380px;
+  padding: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+}
+.login-container .right-corner {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  margin-bottom: 0px;
+  border: 1px solid rgb(235, 221, 221);
+}
+.login-container .right-corner button {
+  padding: 3px;
+}
+.login-container .right-corner button:hover {
+  cursor: pointer;
+}
+.login-container .login-wrapper {
+  font-family: Inter;
+  box-sizing: border-box;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 0px;
+}
+.login-container .login-wrapper input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 10px;
+  font-size: 1rem;
+}
+.login-container .login-wrapper li {
+  margin-bottom: 15px;
+}
+.login-container .login-wrapper li.fullname {
+  text-transform: capitalize;
+}
+.login-container .login-wrapper li.fullname .firstandlastName {
+  display: flex;
+  gap: 15px;
+}
+.login-container .login-wrapper li.fullname .firstandlastName input {
+  text-transform: capitalize;
+}
+.login-container .login-wrapper li input.inputForEdit {
+  display: none;
+  background-color: var(--background-color);
+  margin: 5px 0 25px 0;
+  padding: 20px;
+}
+.login-container .login-wrapper button {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 10px;
+  font-size: 1rem;
+}
+.login-container .login-wrapper button:hover {
+  background-color: rgb(223, 223, 230);
+  cursor: pointer;
+}
+.login-container #login-notif {
+  color: var(--warning-color);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../client/src/assets/font/Montserrat.ttf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../client/src/assets/font/Inter.ttf);
+}/*# sourceMappingURL=index.css.map */

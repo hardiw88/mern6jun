@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Index</title>
+  </head>
+  <body>
+    <!-- <div class="main-wrapper"> -->
+    <div class="login-container" id="dashboard">
+      Welcome, <b id="username">username</b>
+      <p class="right-corner"><button onclick="handlerLogout()">Logout</button></p>
+      <br />
+
+      <div class="login-wrapper">
+        <br />
+        <hr />
+        <ul>
+          <br />
+          <li>
+            <b>Your ID: </b>
+            <span id="id"></span>
+            <input class="inputForEdit" id="editId" value="" />
+          </li>
+          <li class="fullname">
+            <b>Full Name:</b>
+            <span id="firstname"></span> <span id="lastname"></span>
+            <div class="firstandlastName">
+              <input class="inputForEdit" id="editFirstName" value="" />
+              <input class="inputForEdit" id="editLastName" value="" />
+            </div>
+          </li>
+          <li>
+            <b>Age: </b>
+            <span id="age">Age</span>
+            <input class="inputForEdit" id="editAge" value="" />
+          </li>
+          <li>
+            <b>Your email: </b>
+            <span id="email">Email</span>
+            <input class="inputForEdit" id="editEmail" value="" />
+          </li>
+          <li>
+            <b>Your Token: </b>
+            <span id="token"></span>
+          </li>
+        </ul>
+        <br />
+        <button onclick="handlerEditProfile()">Edit Profile</button>
+      </div>
+    </div>
+    <!-- </div> -->
+    <script src="index.js"></script>
+    <script>
+      window.addEventListener(`DOMContentLoaded`, fetchData)
+    </script>
+  </body>
+</html>

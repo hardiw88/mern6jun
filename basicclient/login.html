@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Index</title>
+  </head>
+  <body>
+    <!-- <form onsubmit="handlerLogin()"> -->
+    <div class="login-container">
+      <p class="right-corner"><a href="../basicclient/dashboard.html"> << Back to Home</a></p>
+      <br />
+      <div class="login-wrapper">
+        <h2>Log In To your Account</h2>
+        <br />
+
+        <hr />
+
+        <br />
+        <label for="username">Username:</label><br />
+        <input id="username" placeholder="Input Username" />
+        <br /><br />
+
+        <label for="password">Password:</label><br />
+        <input id="password" placeholder="Input Password" />
+        <br /><br />
+        <p id="login-notif"></p>
+        <br />
+        <button onclick="handlerLogin()">Log In</button>
+        <br />
+        <br />
+
+        <p>Forget Your Password? Click Here</p>
+
+        <br />
+        <br />
+      </div>
+    </div>
+    <!-- </form> -->
+
+    <script src="index.js"></script>
+  </body>
+</html>
