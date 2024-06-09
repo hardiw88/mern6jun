@@ -11,19 +11,25 @@ const loginNotif = document.getElementById("login-notif")
 const inputUsername = document.getElementById("username")
 const inputPassword = document.getElementById("password")
 
-let editId = document.getElementById("editId")
-let editFirstName = document.getElementById("editFirstName")
-let editLastName = document.getElementById("editLastName")
-
-let editAge = document.getElementById("editAge")
-let editEmail = document.getElementById("editEmail")
-
+//display elements
 let id = document.getElementById("id")
 let username = document.getElementById("username")
 let firstname = document.getElementById("firstname")
 let lastname = document.getElementById("lastname")
 let age = document.getElementById("age")
 let email = document.getElementById("email")
+
+//input elements
+let editId = document.getElementById("editId")
+let editFirstName = document.getElementById("editFirstName")
+let editLastName = document.getElementById("editLastName")
+let editAge = document.getElementById("editAge")
+let editEmail = document.getElementById("editEmail")
+
+//button elements
+let saveEditButton = document.querySelector(".saveEditButton")
+let saveCancelButton = document.querySelector(".saveCancelButton")
+let editProfileButton = document.querySelector(".editProfileButton")
 
 // ============================
 // HANDLER (BUTTON)
@@ -95,8 +101,6 @@ const fetchData = async () => {
         document.getElementById("age").innerHTML = response.data.age
         document.getElementById("email").innerHTML = response.data.email
         document.getElementById("dashboard").style.display = "block"
-        console.log("username: ", lsUsername)
-        console.log("token: ", token)
 
         editId.value = response.data.id
         editFirstName.value = response.data.firstname
@@ -130,6 +134,32 @@ const handlerLogout = () => {
   window.location.href = "./login.html"
 }
 
+const handlerSaveEdit = async () => {
+  const username = JSON.parse(localStorage.getItem(`username`))
+  const newID = editId.value
+  const newFirstName = editFirstName.value
+  const newLastName = editLastName.value
+  const newAge = editAge.value
+  const newEmail = editEmail.value
+  console.log(username, newID, newFirstName, newLastName, newAge, newEmail)
+
+  try {
+    await axios.patch(`http://localhost:3028/users/edituser/${username}`, {
+      username: username,
+      id: newID,
+      firstname: newFirstName,
+      lastname: newLastName,
+      age: newAge,
+      email: newEmail,
+      token: JSON.parse(localStorage.getItem(`userToken`)),
+    })
+  } catch (error) {
+    localStorage.clear()
+    alert("Please Relogin!", error)
+    window.location.href = "login.html"
+  }
+}
+
 const handlerEditProfile = () => {
   id.innerHTML = ""
   firstname.innerHTML = ""
@@ -142,6 +172,11 @@ const handlerEditProfile = () => {
   editLastName.style.display = "block"
   editAge.style.display = "block"
   editEmail.style.display = "block"
+  editEmail.disabled = "true"
+
+  saveEditButton.style.display = "block"
+  saveCancelButton.style.display = "block"
+  editProfileButton.style.display = "none"
 }
 
 function validateUser() {
