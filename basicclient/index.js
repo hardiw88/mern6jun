@@ -66,11 +66,13 @@ const handlerLogin = async () => {
   } catch (error) {
     const errCode = error.response.status
     if (errCode) {
+      loginNotif.style.display = "block"
       loginNotif.innerHTML = error.response.data.error
 
       setTimeout(() => {
         loginNotif.innerHTML = ""
-      }, 3000)
+        loginNotif.style.display = "none"
+      }, 5000)
     }
   }
 }
@@ -88,7 +90,15 @@ const fetchData = async () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3028/dashboard", { token: token, username: lsUsername })
+      const response = await axios.post(
+        "http://localhost:3028/dashboard",
+        { username: lsUsername },
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        }
+      )
 
       if (response.status === 200) {
         console.log(response)

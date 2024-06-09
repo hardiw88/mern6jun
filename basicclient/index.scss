@@ -9,7 +9,7 @@
   background: linear-gradient(to right, black, black, black);
   background-color: var(--background-color) !important;
   --background-color: rgba(153, 194, 165, 0.76);
-  --warning-color: #9c0f0f;
+  --warning-color: #df0a0a;
   --title-color: rgb(39, 33, 33);
 }
 
@@ -135,6 +135,16 @@ body {
   #login-notif {
     color: var(--warning-color);
     font-weight: bold;
+    // border: 1px solid black;
+    margin-top: 10px;
+    // margin-bottom: -10px;
+
+    // border: 1px solid var(--warning-color);
+    border-radius: 5px;
+    // padding: 10px;
+    font-size: 0.95rem;
+    display: none;
+    font-family: Montserrat;
   }
 }
 
