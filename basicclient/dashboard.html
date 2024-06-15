@@ -12,7 +12,7 @@
     <!-- <div class="main-wrapper"> -->
     <div class="login-container" id="dashboard">
       Welcome, <b id="username">username</b>
-      <p class="right-corner"><button onclick="handlerLogout()">Logout</button></p>
+      <p class="right-corner"><button id="logoutButton" onclick="handlerLogout()">Logout</button></p>
       <br />
 
       <div class="login-wrapper">
@@ -20,11 +20,7 @@
         <hr />
         <ul>
           <br />
-          <li>
-            <b>Your ID: </b>
-            <span id="id"></span>
-            <input class="inputForEdit" id="editId" value="" />
-          </li>
+
           <li class="fullname">
             <b>Full Name:</b>
             <span id="firstname"></span> <span id="lastname"></span>
@@ -44,7 +40,12 @@
             <input class="inputForEdit" id="editEmail" value="" />
           </li>
           <li>
-            <b>Your Token: </b>
+            <b>Your Unique ID: </b>
+            <span id="id"></span>
+            <!-- <input class="inputForEdit" id="editId" value="" /> -->
+          </li>
+          <li>
+            <b>Token expired in: </b>
             <span id="token"></span>
           </li>
         </ul>

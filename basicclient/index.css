@@ -35,6 +35,9 @@ body {
   border-radius: 20px;
   transform: translate(-50%, -50%);
 }
+.login-container #username {
+  text-transform: capitalize;
+}
 .login-container .right-corner {
   display: block;
   position: absolute;
@@ -122,9 +125,9 @@ body {
 
 @font-face {
   font-family: Montserrat;
-  src: url(../client/src/assets/font/Montserrat.ttf);
+  src: url(./src/fonts/Montserrat.ttf);
 }
 @font-face {
   font-family: Inter;
-  src: url(../client/src/assets/font/Inter.ttf);
+  src: url(./src/fonts/Inter.ttf);
 }/*# sourceMappingURL=index.css.map */
